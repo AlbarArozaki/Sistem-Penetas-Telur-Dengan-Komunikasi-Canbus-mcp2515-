@@ -1,4 +1,4 @@
-![prototype](Users\user\Pictures\Saved Pictures\1. Prototype)
+![Uploading IMG20240924160843.jpg…]()
 ---
 # Sistem-Penetas-Telur-Dengan-Komunikasi-Canbus-(mcp2515)
 
