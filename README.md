@@ -1,4 +1,4 @@
-![prototype](C:\Users\user\Pictures\Saved Pictures\1. Prototype)
+![prototype](Users\user\Pictures\Saved Pictures\1. Prototype)
 ---
 # Sistem-Penetas-Telur-Dengan-Komunikasi-Canbus-(mcp2515)
 
