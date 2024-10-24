@@ -59,24 +59,31 @@ void setup() {
   lcd.setCursor(0, 1);
   lcd.print("loading.........");
   delay(500);
+  lcd.clear();
 }
 
 void loop() {
   float h = dht.readHumidity();
   float t = dht.readTemperature();
 
-  if (isnan(h) || isnan(t)) return;
+  if (isnan(h) || isnan(t)) {
+    lcd.setCursor(0, 0);
+    lcd.print("     Sensor     ");
+    lcd.setCursor(0, 1);
+    lcd.print(" Tidak Terbaca  ");
+    return;
+  }
   
   int suhu = t * 100;
   int kelembaban = h * 100;
   bool statuslampu = false;
 
   if (t <= 37.0) {
-    digitalWrite(RELAY, LOW);
-    statuslampu = true;
-  } else if (t >= 39.0) {
     digitalWrite(RELAY, HIGH);
     statuslampu = false;
+  } else if (t >= 40.0) {
+    digitalWrite(RELAY, LOW);
+    statuslampu = true;
   }
   
   canMsg.data[0] = suhu >> 8;
